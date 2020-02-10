@@ -1,6 +1,6 @@
 package entidades;
 
-public class Produto {
+public class Produto implements Cloneable {
 
     private String nome;
     private double valor;
@@ -46,5 +46,10 @@ public class Produto {
                 ", valor=" + valor +
                 ", quantidade=" + quantidade +
                 '}';
+    }
+
+    @Override
+    public Produto clone() throws CloneNotSupportedException {
+        return (Produto) super.clone();
     }
 }

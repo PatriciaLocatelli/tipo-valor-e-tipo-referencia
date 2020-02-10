@@ -3,7 +3,7 @@ package aplicacao;
 import entidades.Produto;
 
 public class Programa {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
         Produto p1 = new Produto("Celular", 100.0, 1);
         System.out.println(p1);
 
@@ -26,5 +26,23 @@ public class Programa {
         Imprimindo os valores padrão
          */
         System.out.println(p3);
+
+        /*
+        Boxing
+         */
+        int x;
+//        Object obj = x;
+//        System.out.println(obj);
+//        /* Unboxing*/
+//
+//        int y = (int) obj;
+//        System.out.println(y);
+
+        Produto p4;
+        p4 = p2.clone();
+
+        System.out.println("p4 = p2.clone()" + p4);
+
+
     }
 }
